@@ -1,9 +1,13 @@
 import styles from 'src/app/components/components.module.css'
-const LoginForm = () => {
+
+const CreateUserForm = () => {
     return (
         <div>
-            <h2>Login Form</h2>
+            <h2>Create User Form</h2>
             <form className={styles.form}>
+                <label htmlFor="name">Name</label>
+                <input type="text" name="name"/>
+
                 <label htmlFor="email">Email</label>
                 <input type="email" name="email"/>
 
@@ -14,6 +18,6 @@ const LoginForm = () => {
             </form>
         </div>
     );
-};
+}
 
-export default LoginForm;
+export default CreateUserForm;
