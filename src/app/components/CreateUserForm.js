@@ -4,7 +4,7 @@ const CreateUserForm = () => {
     return (
         <div>
             <h2>Create User Form</h2>
-            <form className={styles.form}>
+            <form className={styles.Form} onSubmit={(e) => CreateUser(e)}>
                 <label htmlFor="name">Name</label>
                 <input type="text" name="name"/>
 

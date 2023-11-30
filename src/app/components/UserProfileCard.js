@@ -1,11 +1,12 @@
 import styles from 'src/app/components/components.module.css'
 
-const UserProfileCard = () => {
+const UserProfileCard = ({user}) => {
     return (
-        <div>
-            <h2>User Profile</h2>
+        <div className={styles.UserProfile}>
+            <h2>Name: {user?.name}</h2>
+            <p>Email: {user?.email}</p>
         </div>
     );
-}
+};
 
 export default UserProfileCard;

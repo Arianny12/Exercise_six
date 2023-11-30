@@ -1,9 +1,9 @@
 import styles from 'src/app/components/components.module.css'
-const LoginForm = () => {
+const LoginForm = (loginUser) => {
     return (
         <div>
             <h2>Login Form</h2>
-            <form className={styles.form}>
+            <form className={styles.Form} onSubmit={(e) => loginUser(e)}>
                 <label htmlFor="email">Email</label>
                 <input type="email" name="email"/>
 

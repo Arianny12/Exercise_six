@@ -1,13 +1,19 @@
-import Header from "@/app/components/Header";
+import { useEffect} from "react";
+import { useRouter} from "next/router";
 import UserProfileCard from "@/app/components/UserProfileCard";
+export default function UserProfile({isLoggedIn, userInformation}){
+    const router = useRouter ();
+    useEffect (() =>{
+        if (!isLoggedIn) router.push("/login");
 
-export default function UserProfile() {
+    }, [isLoggedIn])
+
     return(
         <>
-            <Header/>
+           
             <main>
             <h1>User Profile</h1>  
-            <UserProfileCard/>  
+            <UserProfileCard user={userInformation}/>  
             </main>
         </>
     );
