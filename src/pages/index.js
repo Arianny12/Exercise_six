@@ -6,11 +6,11 @@ export default function UserProfile({isLoggedIn, userInformation}){
     useEffect (() =>{
         if (!isLoggedIn) router.push("/login");
 
-    }, [isLoggedIn])
+    }, [isLoggedIn]);
 
     return(
         <>
-           
+        
             <main>
             <h1>User Profile</h1>  
             <UserProfileCard user={userInformation}/>  

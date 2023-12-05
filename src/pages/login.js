@@ -8,7 +8,7 @@ export default function Login({isLoggedIn, loginUser}) {
     useEffect (() =>{
         if (isLoggedIn) router.push("/");
 
-    }, [isLoggedIn])
+    }, [isLoggedIn]);
 
     return(
         <main>

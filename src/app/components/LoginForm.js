@@ -1,5 +1,5 @@
 import styles from 'src/app/components/components.module.css'
-const LoginForm = (loginUser) => {
+const LoginForm = ({loginUser}) => {
     return (
         <div>
             <h2>Login Form</h2>
@@ -8,9 +8,9 @@ const LoginForm = (loginUser) => {
                 <input type="email" name="email"/>
 
                 <label htmlFor="pass">Password</label>
-                <input type="password" name="pass"/>
+                <input type="password" name="password"/>
 
-                <button type="submit">Create User</button>
+                <button type="submit">Log In</button>
             </form>
         </div>
     );

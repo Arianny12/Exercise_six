@@ -11,7 +11,7 @@ export default function CreateUser({createUser, isLoggedIn}) {
 
         <main>
         <h1>Create User</h1> 
-        <CreateUserForm createUsser = {createUser}/>
+        <CreateUserForm createUser={createUser}/>
         </main>
     );
 }

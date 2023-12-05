@@ -1,16 +1,27 @@
 import Link from "next/link";
 import styles from 'src/app/components/components.module.css'
 
-const Header = () => {
+const Header = ({isLoggedIn, logoutUser}) => {
+    console.log({isLoggedIn})
     return (
         <header className={styles.header}>
             <nav className={styles.HeaderNav}>
-                <Link href="/">User Profile</Link>
-                <Link href="/login">User Login</Link>
-                <Link href="/create">Create User</Link>
+                {isLoggedIn && (
+                    <>
+                        <Link href="/">User Profile</Link>
+                        <a onClick={logoutUser}>Log Out</a>
+                    </>
+                )}
+                {!isLoggedIn && (
+                    <>
+                        <Link href="/login">User Login</Link>
+                        <Link href="/create">Create User</Link>
+                    </>
+                )}
+        
             </nav>
         </header>
-    )
+    );
 }
 
 export default Header;
